@@ -20,7 +20,13 @@ ul {
     text-align: center;
 }
 
-
+.fas.fa-bars{
+    background-color: #1259c3;
+    padding: 8px;
+    color:white;
+    border-radius: 5px;
+    font-size: 2em;
+}
 /* & main --------------------------------------------*/
 section .price {
     font-size: 18px;
