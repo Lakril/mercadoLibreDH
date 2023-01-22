@@ -99,16 +99,22 @@ footer .feature p {
 
 /*& Breakpoints -----------------------------------*/
 /* ToDo: Cellphones */
-@media (max-width: 361px) {
-    .description {
+@media (max-width: 480px) {
+
+    .description,
+    nav {
         display: none;
     }
 }
 
 /*TODO: tablets  */
-@media (min-width: 361px) {
+@media (min-width: 480px) {
     .item {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .burger-menu {
+        display: none;
     }
 }
 
@@ -116,5 +122,9 @@ footer .feature p {
 @media (min-width: 769px) {
     .item {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .burger-menu {
+        display: none;
     }
 }
