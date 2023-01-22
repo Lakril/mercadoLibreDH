@@ -31,31 +31,45 @@ header p {
     text-align: center;
 }
 
-.fas.fa-bars{
+.fas.fa-bars {
     background-color: #1259c3;
     padding: 8px;
-    color:white;
+    color: white;
     border-radius: 5px;
     font-size: 2em;
 }
+
 /* & main --------------------------------------------*/
 main {
-    background-color: #ebebeb;
+    /* background-color: #ebebeb; */
+    max-width: 90%;
 }
 
-.items h2 {
+main section h2 {
     font-size: 24px;
 }
 
-section .price {
+.price {
     font-size: 18px;
 }
 
-section .discount {
+.discount {
     font-size: 16px;
 }
-section .description {
+
+.description {
     font-size: 16px;
+    font-weight: bold;
+}
+
+.item {
+    padding-bottom: 10px;
+    /* border: solid #1259c3 2px; */
+}
+
+.details {
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
 }
 
 /* & footer ------------------------------------------ */
@@ -75,5 +89,5 @@ h3 {
 }
 
 footer .feature p {
-    color:#666;
+    color: #666;
 }
