@@ -1,6 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -56,26 +57,49 @@ main section h2 {
 
 .price {
     font-size: 18px;
+    width: 30%;
+    /* border: solid #1259c3 2px; */
 }
 
 .discount {
     font-size: 16px;
+    width: 70%;
+    color: #39b54a;
+    /* border: solid #c72e48 2px; */
 }
 
 .description {
     font-size: 16px;
-    font-weight: bold;
 }
 
 .item {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     /* border: solid #1259c3 2px; */
 }
 
 .details {
     border-top: solid 1px #ebebeb;
     padding: 15px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.fa-truck {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    color: #39b54a;
+    }
 
 /* & footer ------------------------------------------ */
 footer section {
