@@ -17,43 +17,48 @@ body {
 /* & Header------------------------------------------ */
 header {
     background-color: #EAC926;
+    padding: 20px;
 }
 
-.fas.fa-search {
-    background-color: #ebebeb;
-    padding: 3px;
-    border-radius: 3px;
+/* ------------------------------------------------- */
+
+.burger-menu {
+    background-color: #1259c3;
+    color: #ffffff;
+    display: block;
+    max-width: 50px;
+    font-weight: 400;
+    text-align: center;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2em;
+    margin: auto;
 }
 
-nav a {
+.header-bottom-bar a {
     text-decoration: none;
-    color: black;
+    color: #222222;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
 }
 
 ul {
     list-style: none;
 }
 
-header p {
-    text-align: center;
-}
 
-.burger-menu {
-    text-align: center;
-}
-
-.fas.fa-bars {
-    background-color: #1259c3;
-    padding: 8px;
-    color: white;
-    border-radius: 5px;
-    font-size: 2em;
-}
 
 /* & main --------------------------------------------*/
 main {
     /* background-color: #ebebeb; */
     max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border: solid 1px red;
+
 }
 
 main img {
@@ -78,9 +83,10 @@ main h2 {
     /* border: solid #c72e48 2px; */
 }
 
-.description {
+.name-item {
     font-size: 1rem;
     width: 100%;
+    display: none;
     /* border: solid #c72e48 2px; */
 
 }
@@ -136,29 +142,63 @@ footer .feature p {
 
 /*& Breakpoints -----------------------------------*/
 /* ToDo: Cellphones */
-@media (max-width: 480px) {
+@media (min-width: 0px) {
 
-    .description,
-    nav {
-        display: none;
+    .header-top-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .logo {
+        border: solid 2px red;
+        width: 50%;
+        padding-right: 5px;
+
+    }
+    /* ---------------------------- */
+    .search-bar {                       /* parent */
+        border: solid 2px red;
+        display: flex;
+        width: 50%;
+        max-width: 350px;
     }
 
-    main {
+    .fas.fa-search {                    /* child 1 */
+        background-color: white;
+        border-radius: 3px;
+        width: 20%;
         display: flex;
-        flex-direction: column;
-        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input {                             /* child 2 */
+        background-color: white;
+        width: 80%;
+     }
+    /* --------------------------------- */
+    .copy-header {
+        /* border: solid 2px red; */
+        font-weight: 400;
+        width: 100%;
+        text-align: center;
+        margin: 25px 0;
+        font-size: inherit;
+    }
+    .header-bottom-bar {
+        display: none;
     }
 
 }
 
 /*TODO: tablets  */
-@media (min-width: 480px) {
+@media (min-width: 361px) {
     .item {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        box-shadow: 0px 0px 10px #646464;
     }
 
-    .burger-menu {
-        display: none;
+    .name-item {
+        display: flex;
     }
 
     main {
@@ -176,16 +216,37 @@ footer .feature p {
     .item {
         width: 45.999999%;
     }
-}
-
-/* TODO: desktop */
-@media (min-width: 769px) {
-    .item {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
 
     .burger-menu {
         display: none;
+    }
+/* --------------------------------------- */
+    .header-top-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .logo {
+        border: solid 2px rgb(80, 47, 201);
+        width: 146px;
+    }
+    .search-bar {
+        max-width: 350px;
+    }
+    .copy-header {
+        width: 100%;
+    }
+    .header-bottom-bar {
+        display: block;
+    }
+
+}
+
+/* TODO: desktop */
+@media (min-width: 769px) and (orientation: landscape) {
+    .item {
+        box-shadow: 0px 0px 10px #646464;
     }
 
     main {
@@ -203,4 +264,41 @@ footer .feature p {
     .item {
         width: 24%;
     }
+    /* &------------------------------- */
+    .logo {
+        width: 200px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .header-top-bar {
+        border: dotted 2px red;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        max-height: 50px;
+    }
+
+    .copy-header {
+        width: 240px;
+        text-align: right;
+    }
+
+    .header-bottom-bar {
+        border: dotted 2px red;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-bottom-bar ul {
+        display: flex;
+    }
+    .header-bottom-bar li {
+        margin: 0 5px;
+    }
+
+
+
 }
