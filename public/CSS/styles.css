@@ -328,3 +328,53 @@ footer .feature p {
         margin: 0 5px;
     }
 }
+
+/* & Formulario--------------------------------------- */
+
+.create-form {
+    /* margin-top: 10px; */
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+
+}
+
+.ctrl-form {
+    margin-bottom: 15px;
+}
+
+.input-radio label {
+    /* margin-bottom: 5px; */
+    float: left;
+    width: 100px;
+}
+
+input[type="radio"] {
+    float: left;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.checkbox label[type="checkbox"] {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+.checkbox input {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+}
+
+
+
+.ctrl {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+}

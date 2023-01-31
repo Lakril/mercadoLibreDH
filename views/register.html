@@ -54,28 +54,85 @@
 
   <!-- & --------------------MAIN -------------------------->
   <main>
-    <form action="/home" method="POST" id="singUp" >
-      <input type="text" placeholder="Nombre y apellido">
-      <input type="text" placeholder="Nombre de usuario">
-      <input type="email" placeholder="E-mail">
-      <label for="">Fecha de nacimiento</label>
-      <input type="date">
-      <input type="text" placeholder="Domicilio">
-      <label for="">Perfil del usuario</label><br>
-      <label for=""><input type="radio" name="profileUser" id="" value="comprador">Comprador</label>
-      <label for=""><input type="radio" name="profileUser" id="" value="vendedor">Vendedor</label>
-      <label for="">Intereses</label>
-      <labe>Electro<input type="checkbox" name="interest" value="Electro"></labe>
-      <labe>Moda<input type="checkbox" name="interest" value="Moda"></labe>
-      <labe>Hogar<input type="checkbox" name="interest" value="Hogar"></labe>
-      <labe>Juguetería<input type="checkbox" name="interest" value="Juguetería"></labe>
-      <labe>Vida sana<input type="checkbox" name="interest" value="Vida sana"></labe>
-      <label for="">Elige tu foto de usuario</label>
-      <input type="file" accept=".jpg .png">
-      <input type="password" name="password" id="" placeholder="Contraseña">
-      <input type="password" name="password" id="" placeholder="Confirmar contraseña">
-      <button type="submit" form="singUp">Enviar</button>
-      <button type="reset" >Borrar</button>
+    <form action="/home" method="POST" id="singUp" class="create-form">
+
+      <div class="ctrl-form">
+        <input type="text" placeholder="Nombre y apellido" class="ctrl">
+      </div>
+      <div class="ctrl-form">
+        <input type="text" placeholder="Nombre de usuario" class="ctrl">
+      </div>
+      <div class="ctrl-form">
+        <input type="email" placeholder="E-mail" class="ctrl">
+      </div>
+
+      <div class="ctrl-form">
+        <label for="">Fecha de nacimiento</label>
+        <input type="date" class="ctrl">
+      </div>
+
+      <div class="ctrl-form">
+        <input type="text" placeholder="Domicilio"class="ctrl">
+      </div>
+
+      <div class="ctrl-form">
+        <label for="">Perfil del usuario</label>
+
+        <div class="input-radio">
+          <input type="radio" name="profileUser" id="" value="Comprador">
+          <label for="radio">Comprador</label>
+          <input type="radio" name="profileUser" id="" value="Vendedor">
+          <label for="radio">Vendedor</label>
+        </div>
+      </div>
+      <div class="ctrl-form">
+        <label for="">Intereses</label>
+      </div>
+      <!--! CHECKBOX------------- -->
+      <div class="ctrl-form checkbox">
+        <labe>
+          <input type="checkbox" name="interest" value="Electro">
+          Electro
+        </labe>
+      </div>
+      <div class="ctrl-form checkbox">
+        <labe><input type="checkbox" name="interest" value="Moda">
+          Moda</labe>
+      </div>
+      <div class="ctrl-form checkbox">
+        <labe><input type="checkbox" name="interest" value="Hogar">Hogar
+        </labe>
+      </div>
+      <div class="ctrl-form checkbox">
+        <labe><input type="checkbox" name="interest" value="Juguetería">
+          Juguetería</labe>
+      </div>
+      <div class="ctrl-form checkbox">
+        <labe><input type="checkbox" name="interest" value="Vida sana">
+          Vida sana</labe>
+      </div>
+
+      <div class="ctrl-form">
+        <label for="">Elige tu foto de usuario</label>
+      </div>
+      <div class="ctrl-form">
+        <input type="file" accept=".jpg .png">
+      </div>
+
+      <div class="ctrl-form">
+        <input type="password" name="password" id="" placeholder="Contraseña" class="ctrl">
+      </div>
+      <div class="ctrl-form">
+        <input type="password" name="password" id="" placeholder="Confirmar contraseña" class="ctrl">
+      </div>
+
+      <div class="ctrl-form">
+        <button type="submit" form="singUp" class="ctrl">Enviar</button>
+      </div>
+      <div class="ctrl-form">
+        <button type="reset" class="ctrl">Borrar</button>
+      </div>
+
     </form>
 
   </main>
