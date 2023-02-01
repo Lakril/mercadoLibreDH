@@ -12,6 +12,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
+    background: #ebebeb;
 }
 
 /* & Header------------------------------------------ */
@@ -48,6 +49,9 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    right: 17px;
+    border: none;
 }
 
 
@@ -174,18 +178,15 @@ footer .feature p {
 
     .fas.fa-search {
         /* child 1 */
-        background-color: white;
-        border-radius: 3px;
-        width: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        color: #666;
     }
 
     input {
         /* child 2 */
-        background-color: white;
         width: 100%;
+        padding: 4px;
+        border-radius: 4px;
+        border: none;
     }
 
     /* --------------------------------- */
@@ -205,7 +206,7 @@ footer .feature p {
 }
 
 /*TODO: tablets  */
-@media (min-width: 361px) {
+@media (min-width: 480px) {
     .item {
         box-shadow: 0px 0px 10px #646464;
     }
@@ -251,7 +252,7 @@ footer .feature p {
     .search-bar {
         /* parent */
         /* border: solid 2px red; */
-        justify-content: center;
+        /* justify-content: center; */
     }
 
     .copy-header {
@@ -371,10 +372,18 @@ input[type="radio"] {
     top: -1px;
 }
 
-
-
 .ctrl {
     width: 100%;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+.ctrl-form button[type="submit"] {
+    background: rgb(0,68,170);
+    color: white;
+}
+.ctrl-form button[type="reset"] {
+    background-color: rgb(170,0,68);
+    color: white;
 }

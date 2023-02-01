@@ -46,15 +46,15 @@
 
       <ul class="right-navbar">
         <li><a href="">Creá tu cuenta</a> <i class="far fa-id-card"></i></li>
-        <li><a href="">Ingresá </a> <i class="fas fa-sign-in-alt"></i></li>
-        <li><a href="">Mis compras </a> <i class="fas fa-shopping-basket"></i></li>
+        <li><a href="login">Ingresá </a> <i class="fas fa-sign-in-alt"></i></li>
+        <li><a href="#">Mis compras </a> <i class="fas fa-shopping-basket"></i></li>
       </ul>
     </nav>
   </header>
 
-  <!-- & --------------------MAIN -------------------------->
+  <!-- & --------------------MAIN FORM REGISTER-------------------------->
   <main>
-    <form action="/home" method="POST" id="singUp" class="create-form">
+    <form action="" method="" id="singUp" class="create-form">
 
       <div class="ctrl-form">
         <input type="text" placeholder="Nombre y apellido" class="ctrl">
@@ -67,7 +67,7 @@
       </div>
 
       <div class="ctrl-form">
-        <label for="">Fecha de nacimiento</label>
+        <label for=""><h3>Fecha de nacimiento</h3></label>
         <input type="date" class="ctrl">
       </div>
 
@@ -76,7 +76,7 @@
       </div>
 
       <div class="ctrl-form">
-        <label for="">Perfil del usuario</label>
+        <label for=""><h3>Perfil del usuario</h3></label>
 
         <div class="input-radio">
           <input type="radio" name="profileUser" id="" value="Comprador">
@@ -86,34 +86,34 @@
         </div>
       </div>
       <div class="ctrl-form">
-        <label for="">Intereses</label>
+        <label for=""><h3>Intereses</h3></label>
       </div>
       <!--! CHECKBOX------------- -->
       <div class="ctrl-form checkbox">
-        <labe>
+        <labe for="interest">
           <input type="checkbox" name="interest" value="Electro">
           Electro
         </labe>
       </div>
       <div class="ctrl-form checkbox">
-        <labe><input type="checkbox" name="interest" value="Moda">
+        <labe for="interest"><input type="checkbox" name="interest" value="Moda">
           Moda</labe>
       </div>
       <div class="ctrl-form checkbox">
-        <labe><input type="checkbox" name="interest" value="Hogar">Hogar
+        <labe for="interest"><input type="checkbox" name="interest" value="Hogar">Hogar
         </labe>
       </div>
       <div class="ctrl-form checkbox">
-        <labe><input type="checkbox" name="interest" value="Juguetería">
+        <labe for="interest"><input type="checkbox" name="interest" value="Juguetería">
           Juguetería</labe>
       </div>
       <div class="ctrl-form checkbox">
-        <labe><input type="checkbox" name="interest" value="Vida sana">
+        <labe for="interest"><input type="checkbox" name="interest" value="Vida sana">
           Vida sana</labe>
       </div>
 
       <div class="ctrl-form">
-        <label for="">Elige tu foto de usuario</label>
+        <label for=""><h3>Elige tu foto de usuario</h3></label>
       </div>
       <div class="ctrl-form">
         <input type="file" accept=".jpg .png">
@@ -127,7 +127,7 @@
       </div>
 
       <div class="ctrl-form">
-        <button type="submit" form="singUp" class="ctrl">Enviar</button>
+        <a href="home"><button type="submit" class="ctrl">Enviar</button></a>
       </div>
       <div class="ctrl-form">
         <button type="reset" class="ctrl">Borrar</button>
