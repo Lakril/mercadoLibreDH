@@ -45,8 +45,8 @@
       </ul>
 
       <ul class="right-navbar">
-        <li><a href="">Creá tu cuenta</a> <i class="far fa-id-card"></i></li>
-        <li><a href="">Ingresá </a> <i class="fas fa-sign-in-alt"></i></li>
+        <li><a href="register">Creá tu cuenta</a> <i class="far fa-id-card"></i></li>
+        <li><a href="login">Ingresá </a> <i class="fas fa-sign-in-alt"></i></li>
         <li><a href="">Mis compras </a> <i class="fas fa-shopping-basket"></i></li>
       </ul>
     </nav>
@@ -54,13 +54,18 @@
 
   <!-- & --------------------MAIN LOGIN -------------------------->
   <main>
-    <form action="/home" method="POST" id="login">
-      <div class="create-form">
-        <input type="text" placeholder="Nombre de usuario">
-        <input type="password" name="password" id="" placeholder="Contraseña">
+    <form action="/home" id="login" class="create-form">
+
+      <div class="ctrl-form">
+        <input type="text" placeholder="Nombre de usuario" class="ctrl">
       </div>
-      <div class="create-form">
-        <button type="submit" form="login">Enviar</button>
+
+      <div class="ctrl-form">
+        <input type="password" name="password" id="" placeholder="Contraseña" class="ctrl">
+      </div>
+
+      <div class="ctrl-form">
+        <a href="home"><button type="submit" class="ctrl">Enviar</button></a>
       </div>
     </form>
 

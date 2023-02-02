@@ -58,7 +58,6 @@ ul {
 /* & main --------------------------------------------*/
 main {
     /* border: solid 1px red; */
-    /* background-color: #ebebeb; */
     max-width: 90vw;
     display: flex;
     flex-direction: column;
@@ -67,14 +66,13 @@ main {
 
 #banner {
     width: 100vw;
-
 }
 
 main img {
     width: 100%;
 }
 
-main h2 {
+h2 {
     font-size: 1.5rem;
     color: #666666;
     margin: 10px 0;
@@ -131,8 +129,19 @@ main h2 {
 }
 
 /* & footer ------------------------------------------ */
-footer section {
+.main-footer {
+    background-color: #ffffff;
+}
+
+.footer-top-info section {
+    /* border: solid 1px rgb(27, 56, 221); */
     text-align: center;
+    padding: 20px 20px 0px;
+    max-width: 392px;
+}
+
+.copyright {
+    margin: 28px 0 10px 25px;
 }
 
 footer section .fas {
@@ -181,13 +190,6 @@ footer .feature p {
         color: #666;
     }
 
-    input {
-        /* child 2 */
-        width: 100%;
-        padding: 4px;
-        border-radius: 4px;
-        border: none;
-    }
 
     /* --------------------------------- */
     .copy-header {
@@ -196,12 +198,21 @@ footer .feature p {
         width: 100%;
         text-align: center;
         margin: 25px 0;
-        font-size: inherit;
+        /* font-size: inherit; */
     }
 
     .header-bottom-bar {
         display: none;
     }
+
+    .footer-top-info {
+        /* border: solid 1px red; */
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
 
 }
 
@@ -249,12 +260,6 @@ footer .feature p {
         width: 30%;
     }
 
-    .search-bar {
-        /* parent */
-        /* border: solid 2px red; */
-        /* justify-content: center; */
-    }
-
     .copy-header {
         /* border: solid 2px red; */
         text-align: right;
@@ -283,6 +288,13 @@ footer .feature p {
         padding-top: 20px;
     }
 
+    .footer-top-info {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+
 }
 
 /* TODO: desktop */
@@ -310,19 +322,12 @@ footer .feature p {
     /* &------------------------------- */
     .copy-header {
         width: 240px;
-        font-size: 17px;
+        font-size: 1.4em;
     }
 
     .header-bottom-bar {
-        /* border: dotted 2px red; */
-        display: flex;
-        justify-content: space-between;
         padding-top: 20px;
-        font-size: 17px;
-    }
-
-    .header-bottom-bar ul {
-        display: flex;
+        font-size: 1.4em;
     }
 
     .header-bottom-bar li {
@@ -372,6 +377,7 @@ input[type="radio"] {
     top: -1px;
 }
 
+input,
 .ctrl {
     width: 100%;
     padding: 8px;
@@ -380,10 +386,11 @@ input[type="radio"] {
 }
 
 .ctrl-form button[type="submit"] {
-    background: rgb(0,68,170);
+    background: rgb(0, 68, 170);
     color: white;
 }
+
 .ctrl-form button[type="reset"] {
-    background-color: rgb(170,0,68);
+    background-color: rgb(170, 0, 68);
     color: white;
 }
