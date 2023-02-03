@@ -13,12 +13,20 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     background: #ebebeb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* & Header------------------------------------------ */
-header {
+.main-header {
     background-color: #EAC926;
     padding: 20px;
+    /* min-height: 50px; */
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    top: 0;
 }
 
 /* ------------------------------------------------- */
@@ -41,6 +49,10 @@ header {
     color: #222222;
 }
 
+.copy-header {
+    color: black;
+}
+
 ul {
     list-style: none;
 }
@@ -58,14 +70,17 @@ ul {
 /* & main --------------------------------------------*/
 main {
     /* border: solid 1px red; */
-    max-width: 90vw;
+    width: 90vw;
     display: flex;
     flex-direction: column;
     margin: auto;
+    flex: 1;
+    margin-top: 24vh;
 }
 
 #banner {
     width: 100vw;
+    align-self: center;
 }
 
 main img {
@@ -96,13 +111,13 @@ h2 {
     font-size: 1rem;
     width: 100%;
     display: none;
-
 }
 
 .item {
     /* border: solid #1259c3 2px; */
     display: block;
     margin-bottom: 10px;
+    background-color: white;
 }
 
 .details {
@@ -126,11 +141,23 @@ h2 {
     right: 20px;
     top: -15px;
     color: #39b54a;
+    transition: transform 2s;
 }
+
+/* ^  -------------- transform and transition------------*/
+.fa-truck:hover {
+    /* animation-name: spin-truck;
+    animation-duration: 1s;
+    animation-timing-function: linear; */
+    transform: rotate(-90deg);
+}
+/* ^  -------------- end ------------*/
 
 /* & footer ------------------------------------------ */
 .main-footer {
     background-color: #ffffff;
+    min-height: 50px;
+    margin-top: 20px;
 }
 
 .footer-top-info section {
@@ -158,8 +185,13 @@ h3 {
 footer .feature p {
     color: #666;
 }
+/* ^  -------------- transform and transition------------*/
+footer section .fas:hover {
+    color: #03264C;
+}
+/* ^  -------------- end------------*/
 
-/*& Breakpoints -----------------------------------*/
+/*? --------------- Breakpoints -----------------------------------*/
 /* ToDo: Cellphones */
 @media (min-width: 0px) {
 
@@ -190,7 +222,6 @@ footer .feature p {
         color: #666;
     }
 
-
     /* --------------------------------- */
     .copy-header {
         /* border: solid 2px red; */
@@ -198,7 +229,7 @@ footer .feature p {
         width: 100%;
         text-align: center;
         margin: 25px 0;
-        /* font-size: inherit; */
+        font-size: inherit;
     }
 
     .header-bottom-bar {
@@ -213,23 +244,32 @@ footer .feature p {
         justify-content: center;
     }
 
+    /* ^  -------------- transform and transition------------*/
 
+    .details:hover .name-item {
+        display: flex;
+    }
+    /* ^  -------------- end ------------*/
 }
 
 /*TODO: tablets  */
 @media (min-width: 480px) {
+    /* ^  -------------- transform and transition------------*/
     .item {
+        box-shadow: none;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .item:hover  {
         box-shadow: 0px 0px 10px #646464;
     }
+    /* ^  -------------- end------------*/
 
-    .name-item {
+    /* .name-item {
         display: flex;
-    }
-
+    } */
     main {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
+        margin-top: 14.5vh;
     }
 
     main section {
@@ -240,6 +280,7 @@ footer .feature p {
 
     .item {
         width: 45.999999%;
+        background-color: white;
     }
 
     .burger-menu {
@@ -299,20 +340,9 @@ footer .feature p {
 
 /* TODO: desktop */
 @media (min-width: 769px) {
-    .item {
-        box-shadow: 0px 0px 10px #646464;
-    }
 
     main {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-    }
-
-    main section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        margin-top: 15.5vh;
     }
 
     .item {
@@ -335,7 +365,7 @@ footer .feature p {
     }
 }
 
-/* & Formulario--------------------------------------- */
+/* ? ----------------Form------------------------- */
 
 .create-form {
     /* margin-top: 10px; */
@@ -386,11 +416,33 @@ input,
 }
 
 .ctrl-form button[type="submit"] {
-    background: rgb(0, 68, 170);
+    background: #0044aa;
     color: white;
+    /* transition: background-color 0.3s; */
 }
 
 .ctrl-form button[type="reset"] {
-    background-color: rgb(170, 0, 68);
+    background-color: #aa0044;
     color: white;
 }
+/* ^  -------------- transform and transition------------*/
+.ctrl-form button[type="submit"]:hover {
+    background-color: #0022AA;
+}
+/* ^  -------------- end------------*/
+
+
+/* ? ----------------- end ----------------------------- */
+
+
+
+/* *  -------------- animation -----------*/
+
+/* @keyframes spin-truck {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotate(-90deg);
+    }
+} */
