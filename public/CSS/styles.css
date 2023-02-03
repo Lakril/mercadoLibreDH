@@ -12,6 +12,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
+    background: #ebebeb;
 }
 
 /* & Header------------------------------------------ */
@@ -48,13 +49,15 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    right: 17px;
+    border: none;
 }
 
 
 /* & main --------------------------------------------*/
 main {
     /* border: solid 1px red; */
-    /* background-color: #ebebeb; */
     max-width: 90vw;
     display: flex;
     flex-direction: column;
@@ -63,14 +66,13 @@ main {
 
 #banner {
     width: 100vw;
-
 }
 
 main img {
     width: 100%;
 }
 
-main h2 {
+h2 {
     font-size: 1.5rem;
     color: #666666;
     margin: 10px 0;
@@ -127,8 +129,19 @@ main h2 {
 }
 
 /* & footer ------------------------------------------ */
-footer section {
+.main-footer {
+    background-color: #ffffff;
+}
+
+.footer-top-info section {
+    /* border: solid 1px rgb(27, 56, 221); */
     text-align: center;
+    padding: 20px 20px 0px;
+    max-width: 392px;
+}
+
+.copyright {
+    margin: 28px 0 10px 25px;
 }
 
 footer section .fas {
@@ -174,19 +187,9 @@ footer .feature p {
 
     .fas.fa-search {
         /* child 1 */
-        background-color: white;
-        border-radius: 3px;
-        width: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        color: #666;
     }
 
-    input {
-        /* child 2 */
-        background-color: white;
-        width: 100%;
-    }
 
     /* --------------------------------- */
     .copy-header {
@@ -195,17 +198,26 @@ footer .feature p {
         width: 100%;
         text-align: center;
         margin: 25px 0;
-        font-size: inherit;
+        /* font-size: inherit; */
     }
 
     .header-bottom-bar {
         display: none;
     }
 
+    .footer-top-info {
+        /* border: solid 1px red; */
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
 }
 
 /*TODO: tablets  */
-@media (min-width: 361px) {
+@media (min-width: 480px) {
     .item {
         box-shadow: 0px 0px 10px #646464;
     }
@@ -248,12 +260,6 @@ footer .feature p {
         width: 30%;
     }
 
-    .search-bar {
-        /* parent */
-        /* border: solid 2px red; */
-        justify-content: center;
-    }
-
     .copy-header {
         /* border: solid 2px red; */
         text-align: right;
@@ -282,6 +288,13 @@ footer .feature p {
         padding-top: 20px;
     }
 
+    .footer-top-info {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+
 }
 
 /* TODO: desktop */
@@ -309,22 +322,75 @@ footer .feature p {
     /* &------------------------------- */
     .copy-header {
         width: 240px;
-        font-size: 17px;
+        font-size: 1.4em;
     }
 
     .header-bottom-bar {
-        /* border: dotted 2px red; */
-        display: flex;
-        justify-content: space-between;
         padding-top: 20px;
-        font-size: 17px;
-    }
-
-    .header-bottom-bar ul {
-        display: flex;
+        font-size: 1.4em;
     }
 
     .header-bottom-bar li {
         margin: 0 5px;
     }
+}
+
+/* & Formulario--------------------------------------- */
+
+.create-form {
+    /* margin-top: 10px; */
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+
+}
+
+.ctrl-form {
+    margin-bottom: 15px;
+}
+
+.input-radio label {
+    /* margin-bottom: 5px; */
+    float: left;
+    width: 100px;
+}
+
+input[type="radio"] {
+    float: left;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.checkbox label[type="checkbox"] {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+.checkbox input {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+}
+
+input,
+.ctrl {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+.ctrl-form button[type="submit"] {
+    background: rgb(0, 68, 170);
+    color: white;
+}
+
+.ctrl-form button[type="reset"] {
+    background-color: rgb(170, 0, 68);
+    color: white;
 }
