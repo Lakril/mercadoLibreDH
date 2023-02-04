@@ -1,12 +1,12 @@
 const express = require('express');
 const path = require('path');
+const app = express();
 
 const port = process.env.PORT || 3001;
 
-const app = express();
 
-// const publicFolderPath = path.resolve(__dirname, './public');
-app.use(express.static('public'));
+const publicFolderPath = path.resolve(__dirname, './public');
+app.use(express.static(publicFolderPath));
 
 app.get('/', (req, res)=> {
     res.sendFile(path.resolve(__dirname, './src/views/index.html'))
