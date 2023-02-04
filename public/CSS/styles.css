@@ -368,7 +368,7 @@ footer section .fas:hover {
 /* ? ----------------Form------------------------- */
 
 .create-form {
-    /* margin-top: 10px; */
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     padding: 20px 15px;
@@ -415,7 +415,7 @@ input,
     border: none;
 }
 
-.ctrl-form button[type="submit"] {
+.ctrl-form input[type="button"] {
     background: #0044aa;
     color: white;
     /* transition: background-color 0.3s; */
@@ -426,7 +426,7 @@ input,
     color: white;
 }
 /* ^  -------------- transform and transition------------*/
-.ctrl-form button[type="submit"]:hover {
+.ctrl-form input[type="button"]:hover {
     background-color: #0022AA;
 }
 /* ^  -------------- end------------*/

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg" rel="icon" >
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -47,17 +48,17 @@
       <ul class="right-navbar">
         <li><a href="/register">Creá tu cuenta</a> <i class="far fa-id-card"></i></li>
         <li><a href="/login">Ingresá </a> <i class="fas fa-sign-in-alt"></i></li>
-        <li><a href="">Mis compras </a> <i class="fas fa-shopping-basket"></i></li>
+        <li><a href="#">Mis compras </a> <i class="fas fa-shopping-basket"></i></li>
       </ul>
     </nav>
   </header>
 
   <!-- & --------------------MAIN LOGIN -------------------------->
   <main>
-    <form action="/home" id="login" class="create-form">
+    <form action="/log-in" id="login" class="create-form" method="POST">
 
       <div class="ctrl-form">
-        <input type="text" placeholder="Nombre de usuario" class="ctrl">
+        <input type="text" placeholder="Nombre de usuario" class="ctrl" name="user-name">
       </div>
 
       <div class="ctrl-form">
@@ -65,11 +66,15 @@
       </div>
 
       <div class="ctrl-form">
-        <a href="/"><button type="submit" class="ctrl">Enviar</button></a>
+        <a href="/">
+          <input type="button" class="ctrl" value="Enviar"></input></a>
       </div>
     </form>
 
   </main>
+
+  <!-- & --------------------------END MAIN LOGIN -->
+
   <footer class="main-footer">
     <div class="footer-top-info">
       <section>
