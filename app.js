@@ -9,17 +9,15 @@ const publicFolderPath = path.resolve(__dirname, './public');
 app.use(express.static(publicFolderPath));
 
 app.get('/', (req, res)=> {
-    res.sendFile(path.join(__dirname, './src/views/index.html'))
+    res.sendFile(path.join(__dirname, './views/index.html'))
 });
 
 app.get('/register', (req, res)=> {
-    res.sendFile(path.join(__dirname, './src/views/register.html'))
+    res.sendFile(path.join(__dirname, './views/register.html'))
 });
 
 app.get('/login', (req, res)=> {
-    res.sendFile(path.join(__dirname, './src/views/login.html'))
+    res.sendFile(path.join(__dirname, './views/login.html'))
 });
 
-app.listen(port, () =>{
-    console.log(`Server running on port ${port}`);
-});
+app.listen(port, () => console.log(`Server running on port ${port}`));
